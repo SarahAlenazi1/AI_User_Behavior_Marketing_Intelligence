@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1120" width="900" height="1120" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c63b3a"/></marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c7a3a"/></marker>
+    <style>
+      .box { fill:#ffffff; stroke:#c9c8c2; stroke-width:1.5; }
+      .delta { fill:#eaf2fc; stroke:#2a78d6; stroke-width:1.8; }
+      .quar { fill:#fdeeee; stroke:#c63b3a; stroke-width:1.8; }
+      .ai { fill:#f3f0fc; stroke:#4a3aa7; stroke-width:1.8; }
+      .t { font-size:15px; font-weight:700; fill:#0b0b0b; }
+      .s { font-size:12.5px; fill:#52514e; }
+      .k { font-size:11px; font-weight:700; fill:#2a78d6; letter-spacing:.5px; }
+      .e { stroke:#52514e; stroke-width:1.8; fill:none; marker-end:url(#a); }
+    </style>
+  </defs>
+  <rect width="900" height="1120" fill="#fcfcfb"/>
+  <text x="450" y="38" text-anchor="middle" style="font-size:21px;font-weight:700;fill:#0b0b0b">AI User Behavior &amp; Marketing Intelligence — Pipeline</text>
+
+  <rect x="200" y="62" width="500" height="58" rx="10" class="box"/>
+  <text x="218" y="83" class="k">1 · CHOOSE A PROBLEM</text>
+  <text x="218" y="106" class="t">Who uses AI assistants, how, and how to market to them?</text>
+  <path d="M450,120 V144" class="e"/>
+
+  <rect x="200" y="146" width="500" height="70" rx="10" class="box"/>
+  <text x="218" y="167" class="k">2 · GET A DATASET</text>
+  <text x="218" y="189" class="t">Daily_AI_Assistant_Usage_Behavior_Dataset.csv</text>
+  <text x="218" y="207" class="s">Batch 1: 300 historical sessions · Batch 2: 8 new sessions (with errors)</text>
+  <path d="M450,216 V240" class="e"/>
+
+  <rect x="200" y="242" width="500" height="70" rx="10" class="box"/>
+  <text x="218" y="263" class="k">3 · LOAD DATA WITH SPARK</text>
+  <text x="218" y="285" class="t">Landing zone → Spark DataFrame (explicit schema)</text>
+  <text x="218" y="303" class="s">+ session_id · batch_id · ingested_at</text>
+  <path d="M450,312 V336" class="e"/>
+
+  <rect x="100" y="338" width="700" height="96" rx="10" class="box"/>
+  <text x="118" y="359" class="k">4 · DATA QUALITY CHECKS</text>
+  <rect x="118" y="371" width="158" height="50" rx="8" fill="#f4f4f1" stroke="#dedcd5"/>
+  <text x="197" y="392" text-anchor="middle" class="t" style="font-size:13px">Completeness</text>
+  <text x="197" y="410" text-anchor="middle" class="s">no missing fields</text>
+  <rect x="286" y="371" width="158" height="50" rx="8" fill="#f4f4f1" stroke="#dedcd5"/>
+  <text x="365" y="392" text-anchor="middle" class="t" style="font-size:13px">Accuracy</text>
+  <text x="365" y="410" text-anchor="middle" class="s">values &gt; 0 · rating 1–5</text>
+  <rect x="454" y="371" width="158" height="50" rx="8" fill="#f4f4f1" stroke="#dedcd5"/>
+  <text x="533" y="392" text-anchor="middle" class="t" style="font-size:13px">Uniqueness</text>
+  <text x="533" y="410" text-anchor="middle" class="s">no duplicate sessions</text>
+  <rect x="622" y="371" width="160" height="50" rx="8" fill="#f4f4f1" stroke="#dedcd5"/>
+  <text x="702" y="392" text-anchor="middle" class="t" style="font-size:13px">Validity</text>
+  <text x="702" y="410" text-anchor="middle" class="s">known values · timestamp</text>
+  <path d="M450,434 V458" class="e"/>
+
+  <polygon points="450,460 560,510 450,560 340,510" fill="#fff8e6" stroke="#c98500" stroke-width="1.8"/>
+  <text x="450" y="506" text-anchor="middle" class="t">5 · Quality Gate</text>
+  <text x="450" y="525" text-anchor="middle" class="s">passed_all_gates?</text>
+
+  <path d="M340,510 H200 V574" fill="none" stroke="#c63b3a" stroke-width="1.8" marker-end="url(#r)"/>
+  <text x="270" y="500" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#c63b3a">FAIL</text>
+  <rect x="50" y="576" width="300" height="72" rx="10" class="quar"/>
+  <text x="68" y="598" class="k" style="fill:#c63b3a">REJECTED</text>
+  <text x="68" y="620" class="t">Batch 2 is not stored</text>
+  <text x="68" y="638" class="s">failed checks shown in the quality report</text>
+
+  <path d="M560,510 H700 V574" fill="none" stroke="#1c7a3a" stroke-width="1.8" marker-end="url(#g)"/>
+  <text x="630" y="500" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#1c7a3a">PASS</text>
+  <rect x="550" y="576" width="300" height="92" rx="10" class="delta"/>
+  <text x="568" y="598" class="k">6 · DELTA LAKE</text>
+  <text x="568" y="620" class="t">Batch 1 → validated_sessions</text>
+  <text x="568" y="640" class="s">ACID · versioned (history)</text>
+  <path d="M700,668 V692" class="e"/>
+
+  <rect x="550" y="694" width="300" height="92" rx="10" class="delta"/>
+  <text x="568" y="716" class="k">7 · CLEAN / TRUSTED DATA</text>
+  <text x="568" y="738" class="t">trusted_sessions + segment profiles</text>
+  <text x="568" y="758" class="s">time_of_day · session_type · engagement</text>
+  <text x="568" y="776" class="s">score · audience_segment</text>
+  <path d="M700,786 V820 H450 V842" class="e"/>
+
+  <rect x="100" y="844" width="700" height="230" rx="10" class="ai"/>
+  <text x="118" y="867" class="k" style="fill:#4a3aa7">8 · AI / RAG + ANALYTICS</text>
+  <text x="118" y="895" class="t">Analytics: usage, satisfaction and engagement per category</text>
+  <text x="118" y="925" class="t">Segment profiles → documents → Embeddings (all-MiniLM-L6-v2)</text>
+  <text x="118" y="951" class="t">→ ChromaDB (vector database)</text>
+  <text x="118" y="977" class="t">Question → retrieve relevant segments</text>
+  <text x="118" y="1003" class="t">Question + context → LLM (OpenRouter)</text>
+  <text x="118" y="1037" class="s">→ grounded marketing insights: target audiences, engagement drivers, opportunities, messages</text>
+  <text x="118" y="1057" class="s">→ outputs/marketing_insights.md</text>
+</svg>
