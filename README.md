@@ -30,7 +30,7 @@ Main file: [`AI_User_Behavior_Marketing_Intelligence.ipynb`](AI_User_Behavior_Ma
 
 ## 3. Data Source
 
-**Daily AI Assistant Usage Behavior Dataset** (public, synthetic) — [`data/raw/Daily_AI_Assistant_Usage_Behavior_Dataset.csv`](data/raw/Daily_AI_Assistant_Usage_Behavior_Dataset.csv) — 300 sessions, January–March 2025.
+**Daily AI Assistant Usage Behavior Dataset** (public, synthetic) — [`Daily_AI_Assistant_Usage_Behavior_Dataset.csv`](Daily_AI_Assistant_Usage_Behavior_Dataset.csv) — 300 sessions, January–March 2025.
 
 | Column | Values |
 |---|---|
