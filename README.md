@@ -49,7 +49,7 @@ Main file: [`AI_User_Behavior_Marketing_Intelligence.ipynb`](AI_User_Behavior_Ma
 
 ## 4. Workflow / Architecture
 
-![Pipeline architecture](docs/architecture.png)
+![Pipeline architecture](architecture.png)
 
 ```text
 Choose a Problem
